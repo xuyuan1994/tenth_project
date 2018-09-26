@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome ,{{user}} !</h1>
+    <a href="add_review">Add a book and review</a>
+    <a href="logout">Logout</a>
+    <h1>reviews</h1>
+    {% for review in reviews %}
+        <a href="/books/{{review.books.id}}">{{review.books.title}}</a>
+        <p>{{review.rating}}</p>
+        <p>{{review.created_at}}</p>
+    {% endfor %}
+</body>
+</html>

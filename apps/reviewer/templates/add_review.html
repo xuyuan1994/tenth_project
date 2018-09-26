@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a new book title and a review</h1>
+    <form action="process_review" method="POST">
+        {% csrf_token %}
+        <label for="title">Book Title</label>
+        <input type="text" name="title">
+        <br></br>
+        <label for="author">add a new author:</label>
+        <input type="text" name ="author">
+        <br></br>
+        <label for="review">Review</label>
+        <input type="textarea" name="review">
+        <br></br>
+        <label for="rating">Rating:</label>
+        <select name='rating'>
+            <P>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            stars</P>
+        </select>
+        <br></br>
+        <input type="submit" value="Add book and reiew">
+    </form>
+</body>
+</html>
